@@ -214,3 +214,12 @@ footer ul > img {
     text-align: center;
     font-family: var(--Heading-font);
 }
+
+/* hover states */
+.button-2:hover {
+    background-color: hsla(322, 100%, 66%, 0.5);
+}
+.fa:hover {
+    color: hsl(322, 100%, 66%);
+    border-color: hsl(322, 100%, 66%);
+}
