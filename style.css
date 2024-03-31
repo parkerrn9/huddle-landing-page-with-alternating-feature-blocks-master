@@ -149,8 +149,9 @@ footer ul > img {
     padding-top: 7em;
     width: 160px;
     margin-bottom: 1em;
-    filter: invert(100%) sepia(25%) saturate(24%) hue-rotate(314deg) brightness(109%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(25%) saturate(24%) hue-rotate(314deg) brightness(109%) contrast(102%);
 }
+
 .footer-nav li img{
     width: 20px;
 }
