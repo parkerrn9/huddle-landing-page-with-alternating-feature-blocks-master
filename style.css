@@ -166,20 +166,12 @@ footer .main-logo {
 .footer-nav > span:nth-child(2) {
     margin-block: 1em;
 }
-.footer-nav span:nth-child(2) > li{
-  /* margin-block: 1em; */
-  /* display: inline-block; */
-  text-align: left;
-}
+
 .footer-nav span:nth-child(2) > li:first-child {
   padding-top: 3em;
 }
-/* .footer-nav span:nth-child(2) > li:last-child {
-    padding-bottom: 0em;
-} */
 
 .footer-nav > span:nth-child(2) li > p{
-    /* margin-left: 1em; */
     margin-bottom: 1em;
 }
 
@@ -196,20 +188,12 @@ footer .main-logo {
     margin-top: 5px;
 }
 
-/* footer p:last-child {
-  font-size: 0.87rem;
-  padding: 0 1em 1em;
-  text-align: center;
-  font-family: var(--Heading-font);
-} */
-
 
 .socials {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    /* margin-block: 2.5em 1em; */
 }
 
 .socials img{
@@ -217,7 +201,6 @@ footer .main-logo {
     height: auto;
     margin-right: 1em;
     filter: invert(100%) sepia(25%) saturate(24%) hue-rotate(314deg) brightness(109%) contrast(102%);
-    
 }
 
 div.socials span {
@@ -240,6 +223,9 @@ div.socials p {
 
 .fa-stack {
     margin-right: 1em;
+}
+nav button {
+  box-shadow: 1px 1px 4px hsla(209, 11%, 55%, 0.2);
 }
 
 /* hover states */
