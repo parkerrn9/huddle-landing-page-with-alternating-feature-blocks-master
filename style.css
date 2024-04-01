@@ -77,6 +77,7 @@ header nav + div > p  {
     background-color: var(--button-clr);
     color: white;
     font: 500 0.9rem var(--Heading-font);
+    transition: color 0.5s 0.1s, background-color 0.5s 0.1s ;
 }
 
 .illustration-1 img{
@@ -101,11 +102,11 @@ main section > img {
     padding-block: 3em;
 }
 
-main section > h3 {
+main section h3 {
     margin-bottom: 1em;
     font: 600 1.2rem var(--Heading-font);
 }
-main section > p {
+main section p {
     line-height: 1.5;
     color: var(--p-clr);
     font-weight: 500;
@@ -145,7 +146,7 @@ footer {
     text-align: left;
     padding-inline: 1em;
 }
-footer ul > img {
+footer .main-logo {
     padding-top: 7em;
     width: 160px;
     margin-bottom: 1em;
@@ -155,17 +156,34 @@ footer ul > img {
 .footer-nav li img{
     width: 20px;
 }
+.footer-nav > span:first-child {
+  margin-block: 1em;
+}
+.footer-nav > span:first-child p{
+  text-align: left;
+  margin-left: 1em;
+}
+.footer-nav > span:nth-child(2) {
+    margin-block: 1em;
+}
+.footer-nav span:nth-child(2) > li{
+  /* margin-block: 1em; */
+  /* display: inline-block; */
+  text-align: left;
+}
+.footer-nav span:nth-child(2) > li:first-child {
+  padding-top: 3em;
+}
+/* .footer-nav span:nth-child(2) > li:last-child {
+    padding-bottom: 0em;
+} */
 
-.footer-nav span:nth-child(2) li:last-child {
-    padding-bottom: 3em;
+.footer-nav > span:nth-child(2) li > p{
+    /* margin-left: 1em; */
+    margin-bottom: 1em;
 }
 
-.footer-nav span:nth-child(2) li > p{
-    margin-left: 1em;
-    margin-bottom: 2em;
-}
-
-.footer-nav span li {
+.footer-nav > span li {
     display: flex;
     align-items: flex-start;
 }
@@ -178,10 +196,20 @@ footer ul > img {
     margin-top: 5px;
 }
 
+/* footer p:last-child {
+  font-size: 0.87rem;
+  padding: 0 1em 1em;
+  text-align: center;
+  font-family: var(--Heading-font);
+} */
+
+
 .socials {
     display: flex;
     justify-content: center;
-    margin-block: 2.5em 1em;
+    flex-direction: column;
+    align-items: center;
+    /* margin-block: 2.5em 1em; */
 }
 
 .socials img{
@@ -190,6 +218,13 @@ footer ul > img {
     margin-right: 1em;
     filter: invert(100%) sepia(25%) saturate(24%) hue-rotate(314deg) brightness(109%) contrast(102%);
     
+}
+
+div.socials span {
+    padding-block: 1.5em 0;
+}
+div.socials p {
+  padding-block: 3.5em 3em;
 }
 
 .fa {
@@ -207,19 +242,205 @@ footer ul > img {
     margin-right: 1em;
 }
 
-
-.socials + p {
-    font-size: 0.87rem;
-    padding: 0 1em 4em;
-    text-align: center;
-    font-family: var(--Heading-font);
-}
-
 /* hover states */
 .button-2:hover {
     background-color: hsla(322, 100%, 66%, 0.5);
+    cursor: pointer;
 }
+nav button:hover {
+    color: var(--p-clr);
+}
+
 .fa:hover {
     color: hsl(322, 100%, 66%);
     border-color: hsl(322, 100%, 66%);
+    cursor: pointer;
+    animation: parker 0.5s ease-in-out 0.2s 1 forwards;
+}
+
+@keyframes parker {
+    100% {
+        transform: rotate3d(0,0,1, 1turn);
+    }
+}
+
+@media screen and (min-width: 560px) {
+    body {
+        /* background-color: red; */
+    }
+    header {
+      background-image: url(/images/bg-hero-desktop.svg);
+  }
+    .header-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* font-size: larger; */
+        text-align: left;
+    }
+    header nav {
+      padding-inline: 4em;
+      padding-top: 2.5em;
+    }
+
+    header nav img {
+      width: 155px;
+      height: 24px;
+    }
+    header nav button {
+      padding: 0.8em 3.1em;
+      font-size: 0.9rem;
+    }
+    .header-wrapper div:first-child {
+        flex: 1;
+    }
+    .header-wrapper div:last-child {
+        flex: 1.2;
+        display: flex;
+        justify-content: center;
+    }
+    .illustration-1 img {
+        width: 90%;
+    }
+    .header-wrapper div:first-child h2 {
+        padding-right: 1em;
+        margin-bottom: 1em;
+        font-size: 2.9rem;
+    }
+    .header-wrapper div:first-child p {
+        font-size: 20px;
+        padding-right: 2em;
+    }
+
+    header nav + div {
+        /* margin-block-start: 3.2em;
+        margin-block-end: 2.5em; */
+        padding-inline: 4em;
+      }
+
+      main section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline: 6em;
+        padding-inline: 2em 4em;
+        margin-block: 4em;
+      }
+      .one {
+        flex-direction: row-reverse;
+      } 
+      .one > div, .three > div {
+        /* padding-inline: 5em 8em; */
+        padding-inline: 5em 14em;
+      }
+      .two {
+        padding: 1em 2em;
+      }
+      .two > div {
+        padding-inline: 9em;
+        margin-left: 0em;
+      }
+      .three {
+        flex-direction: row-reverse;
+      }
+
+      main section > img{
+        flex: 1;
+        margin-left: -1em;
+        padding-block: 2em;
+      }
+      main section div {
+        flex: 1 460px;
+        text-align: left;
+        /* padding-inline: 3em; */
+      }
+      main section div h3{
+        font-size: 2rem;
+        font-family: var(--Heading-font);
+        font-weight: 600;
+      }
+      main section div p {
+        font-size: 17px;
+        margin-top: 1em;
+        padding-right: 5em;
+        color: var(--p-clr);
+        line-height: 1.7;
+      }
+
+      aside {
+        margin-inline: 22em;
+        padding-block: 4em 2em;
+      }
+      aside > h2 {
+        font-size: 1.5rem;
+      }
+      aside .button-2 {
+        padding-inline: 4em;
+        font-size: 1rem;
+      }
+      footer {
+        padding-top: 11em;
+      }
+      .footer-nav > span:first-child p.location-align {
+        padding-right: 1em;
+        margin-left: 22px;
+      }
+      
+      .footer-nav {
+        display: flex;
+        padding-inline: 4em;
+      }
+      .logo-wrapper {
+        margin-top: -3em;
+      }
+
+      .footer-nav span:first-child{
+        align-self: flex-start;
+        flex: 2 200px;
+        
+      }
+      .footer-nav > span:first-child {
+        margin-block: 0;
+        padding-right: 5em;
+      }
+      .footer-nav span:nth-child(2){
+        align-self: flex-start;
+        flex: 1 50px;
+      }
+      .footer-nav > span:nth-child(2) {
+        margin-block: 0;
+      }
+      .footer-nav span:nth-child(2) > li:first-child {
+        padding-top: 0;
+      }
+      .footer-nav span:nth-child(2) li > p {
+        margin-bottom: 0;
+      }
+      .footer-nav span:nth-child(3){
+        align-self: flex-start;
+        flex: 1 50px;
+      }
+      .footer-nav span:last-child{
+        align-self: flex-start;
+        flex: 1 100px;
+      }
+
+      footer .main-logo {
+        padding-top: 0;
+      }
+      .footer-nav span p {
+        margin-bottom: 0;
+        padding-bottom: 2em;
+        text-align: left;
+      }
+      .socials {
+        flex-direction: column;
+        margin-block-start: 0;
+      }
+      div.socials span {
+        padding-block: 0;
+    }
+      footer p {
+        padding: 0;
+      }
 }
