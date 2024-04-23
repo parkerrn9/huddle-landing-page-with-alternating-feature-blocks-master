@@ -14,4 +14,8 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 *.md
+<<<<<<< HEAD
 design
+=======
+design
+>>>>>>> c1b369cc62ed4078efbda276c8f16765df581fa5
